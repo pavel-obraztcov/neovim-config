@@ -1,10 +1,32 @@
 local lsp = require('lsp-zero').preset({})
 
-lsp.ensure_installed({
-	'pylsp',
-	'r_language_server',
-	'lua_ls'
-})
+local function get_lsps(user)
+    if user == "cdsw" then
+        return {
+            'r_language_server',
+            'lua_ls'
+        }
+    else
+        return {
+            "pylsp",
+            'r_language_server',
+            'lua_ls'
+        }
+    end
+end
+
+local function get_user()
+    local handle = io.popen("whoami")
+    if handle == nil then
+        return "pavel"
+    else
+        return handle:read("*l")
+    end
+end
+
+local user = get_user()
+
+lsp.ensure_installed(get_lsps(user))
 
 lsp.nvim_workspace()
 
