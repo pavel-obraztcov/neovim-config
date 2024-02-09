@@ -10,7 +10,8 @@ local function get_lsps(user)
         return {
             "pylsp",
             'r_language_server',
-            'lua_ls'
+            'lua_ls',
+            'ocamllsp'
         }
     end
 end

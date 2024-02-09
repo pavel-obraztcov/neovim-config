@@ -70,4 +70,6 @@ return require('packer').startup(function(use)
     }
 
     use { 'milanglacier/yarepl.nvim' }
+
+    use { 'ThePrimeagen/vim-be-good' }
  end)
