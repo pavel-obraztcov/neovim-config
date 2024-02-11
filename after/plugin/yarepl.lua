@@ -1,4 +1,28 @@
-require('yarepl').setup {}
+local yarepl = require('yarepl')
+
+yarepl.setup {
+    buflisted = true,
+    scratch = true,
+    ft = 'REPL',
+    wincmd = 'belowright 15 split',
+    metas = {
+        aichat = { cmd = 'aichat', formatter = yarepl.formatter.bracketed_pasting },
+        radian = { cmd = 'radian', formatter = yarepl.formatter.bracketed_pasting },
+        ipython = { cmd = 'ipython', formatter = yarepl.formatter.bracketed_pasting },
+        python = { cmd = 'python', formatter = yarepl.formatter.trim_empty_lines },
+        R = { cmd = 'R', formatter = yarepl.formatter.trim_empty_lines },
+        utop = { cmd = 'utop', formatter = yarepl.formatter.trim_empty_lines },
+        bash = { cmd = 'bash', formatter = yarepl.formatter.trim_empty_lines },
+        zsh = { cmd = 'zsh', formatter = yarepl.formatter.bracketed_pasting },
+    },
+    close_on_exit = true,
+    scroll_to_bottom_after_sending = true,
+    os = {
+        windows = {
+            send_delayed_cr_after_sending = true
+        }
+    }
+}
 
 
 -- Start a REPL and choose which one
