@@ -74,4 +74,6 @@ return require('packer').startup(function(use)
     use { 'ThePrimeagen/vim-be-good' }
 
     use { 'preservim/tagbar' }
+
+    use { "github/copilot.vim" }
  end)
