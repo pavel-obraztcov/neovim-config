@@ -6,6 +6,13 @@ local function get_lsps(user)
             'r_language_server',
             'lua_ls'
         }
+    elseif user == "jupyter" then
+        return {
+            "pylsp",
+            -- 'r_language_server',
+            'lua_ls',
+            -- 'ocamllsp'
+        }
     else
         return {
             "pylsp",
