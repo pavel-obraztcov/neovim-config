@@ -78,4 +78,6 @@ return require('packer').startup(function(use)
     use { 'preservim/tagbar' }
 
     use { "github/copilot.vim" }
+
+    use { "sakshamgupta05/vim-todo-highlight" }
  end)
