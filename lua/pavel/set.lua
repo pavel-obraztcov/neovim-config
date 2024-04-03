@@ -20,7 +20,11 @@ vim.opt.undofile = true
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
-vim.opt.termguicolors = true
+vim.opt.termguicolors = false
+-- if not on a Mac, set termguicolors to true
+if vim.fn.has("mac") == 0 then
+    vim.opt.termguicolors = true
+end
 
 vim.opt.scrolloff = 5
 vim.opt.signcolumn = "yes"
