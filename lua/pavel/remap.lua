@@ -28,10 +28,11 @@ vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
 
 
 -- Quick Fix navigation
-vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
-vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
-vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
-vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
+vim.keymap.set("n", "<leader>j", "<cmd>cnext<CR>zz")
+vim.keymap.set("n", "<leader>k", "<cmd>cprev<CR>zz")
+-- TODO: make this work for location list
+-- vim.keymap.set("n", "", "<cmd>lnext<CR>zz")
+-- vim.keymap.set("n", "", "<cmd>lprev<CR>zz")
 
 -- Replace the word you're on
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
