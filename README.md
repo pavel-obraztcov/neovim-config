@@ -1,7 +1,7 @@
 # Configuration files for Neovim
 
 ## Installation
-Run the following in the `~/.config/nvim` directory:
+Run the following in the `~/.config` directory:
 ```bash
 git clone git@github.com:pavel-obraztcov/neovim-config.git nvim
 ```
