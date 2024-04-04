@@ -36,6 +36,8 @@ return require('packer').startup(function(use)
 
   use('tpope/vim-fugitive')
 
+  use { 'tpope/vim-surround' }
+
   use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v2.x',
@@ -76,4 +78,6 @@ return require('packer').startup(function(use)
     use { 'preservim/tagbar' }
 
     use { "github/copilot.vim" }
+
+    use { "sakshamgupta05/vim-todo-highlight" }
  end)
