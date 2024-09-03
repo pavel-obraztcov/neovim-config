@@ -1,9 +1,20 @@
 # Configuration files for Neovim
 
 ## Installation
-Run the following in the `~/.config` directory:
+
+1. Run the following in the `~/.config` directory:
 ```bash
 git clone git@github.com:pavel-obraztcov/neovim-config.git nvim
+```
+2. Install packer:
+```bash
+git clone https://github.com/wbthomason/packer.nvim.git
+```
+3. Run `:PackerSync` in Neovim. Open `lua/pavel/packer.lua` and
+run
+```
+:source
+:PackerSync
 ```
 
 ## Structure
