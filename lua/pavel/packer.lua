@@ -12,18 +12,29 @@ return require('packer').startup(function(use)
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-  -- use {
-	 --  'morhetz/gruvbox',
-	 --  as = "gruvbox",
-	 --  config = function()
-		--   vim.cmd('colorscheme gruvbox')
-	 --  end
-  -- }
+  use {
+	  'morhetz/gruvbox',
+	  as = "gruvbox",
+	  config = function()
+		  vim.cmd('colorscheme gruvbox')
+	  end
+  }
+
+  use {
+	  'folke/tokyonight.nvim',
+	  as = "tokyonight",
+	  config = function()
+		  vim.cmd('colorscheme tokyonight')
+	  end
+  }
 
   use({
 	  "rose-pine/neovim",
 	  as = "rose-pine",
 	  config = function()
+          require("rose-pine").setup({
+              disable_background = true,
+          })
 		  vim.cmd("colorscheme rose-pine")
 	  end
   })
