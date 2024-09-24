@@ -75,3 +75,12 @@ lsp.setup()
 vim.diagnostic.config({
     virtual_text = true
 })
+
+local lspconfig = require("lspconfig")
+lspconfig.pylsp.setup {
+    settings = {
+        plugins = {
+            flake8 = {maxLineLength = 120},
+        }
+    }
+}
