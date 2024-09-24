@@ -20,6 +20,11 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
+-- go to the first line of previous paragraph
+vim.keymap.set("n", "<leader>[", "2{w")
+-- go to the first line of next paragraph
+vim.keymap.set("n", "<leader>]", "}/^.<CR>")
+
 -- paste over a selection without replacing the value in the register
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
