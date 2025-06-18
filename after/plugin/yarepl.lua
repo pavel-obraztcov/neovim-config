@@ -10,7 +10,7 @@ yarepl.setup {
         python = { cmd = 'python', formatter = yarepl.formatter.trim_empty_lines },
         R = { cmd = 'R', formatter = yarepl.formatter.trim_empty_lines },
         utop = { cmd = 'utop', formatter = yarepl.formatter.trim_empty_lines },
-        lua  = {cmd = 'lua', formatter = yarepl.formatter.trim_empty_lines },
+        lua  = {cmd = 'lua', formatter = yarepl.formatter.bracketed_pasting },
         bash = { cmd = 'bash', formatter = yarepl.formatter.trim_empty_lines },
         zsh = { cmd = 'zsh', formatter = yarepl.formatter.bracketed_pasting },
         aichat = { cmd = 'aichat', formatter = yarepl.formatter.bracketed_pasting },
