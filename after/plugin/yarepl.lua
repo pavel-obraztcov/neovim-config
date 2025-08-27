@@ -6,7 +6,7 @@ yarepl.setup {
     ft = 'REPL',
     wincmd = 'belowright 15 split',
     metas = {
-        ipython = { cmd = 'ipython', formatter = yarepl.formatter.bracketed_pasting },
+        ipython = { cmd = '/home/jupyter/.local/bin/ipython', formatter = yarepl.formatter.bracketed_pasting },
         python = { cmd = 'python', formatter = yarepl.formatter.trim_empty_lines },
         R = { cmd = 'R', formatter = yarepl.formatter.trim_empty_lines },
         utop = { cmd = 'utop', formatter = yarepl.formatter.trim_empty_lines },
