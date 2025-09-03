@@ -33,6 +33,7 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
-vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "120"
+vim.opt.textwidth = 120
 
 vim.opt.rtp:prepend {"/home/pavel/.opam/cs3110-2024sp/share/ocp-indent/vim"}
