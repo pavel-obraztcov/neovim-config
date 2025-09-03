@@ -77,8 +77,12 @@ vim.diagnostic.config({
 local lspconfig = require("lspconfig")
 lspconfig.pylsp.setup {
     settings = {
-        plugins = {
-            flake8 = {maxLineLength = 120},
+        pylsp = {
+            plugins = {
+                pycodestyle = {
+                    maxLineLength = 120
+                }
+            }
         }
     }
 }
