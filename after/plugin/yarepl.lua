@@ -64,3 +64,5 @@ vim.keymap.set("n", "<leader>o", "<cmd>REPLSendOperator<CR>")
 vim.keymap.set("n", "<leader>pp", "<cmd>REPLSendOperator<CR>ap")
 -- Visual selection
 vim.keymap.set("v", "<leader>ss", "<cmd>REPLSendVisual<CR>")
+-- Send the whole document
+vim.keymap.set("n", "<leader>G", "mzggVG<cmd>REPLSendVisual<CR><Esc>'z")
