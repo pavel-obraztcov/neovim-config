@@ -74,15 +74,12 @@ vim.diagnostic.config({
     virtual_text = true
 })
 
-local lspconfig = require("lspconfig")
-lspconfig.pylsp.setup {
-    settings = {
-        pylsp = {
-            plugins = {
-                pycodestyle = {
-                    maxLineLength = 120
-                }
+vim.lsp.config (
+    'pylsp', {
+        plugins = {
+            pycodestyle = {
+                maxLineLength = 120
             }
         }
     }
-}
+)
