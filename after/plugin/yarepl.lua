@@ -20,7 +20,7 @@ yarepl.setup {
     scroll_to_bottom_after_sending = true,
     os = {
         windows = {
-            send_delayed_cr_after_sending = true
+            send_delayed_final_cr = true
         }
     }
 }

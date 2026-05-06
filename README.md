@@ -6,16 +6,12 @@
 ```bash
 git clone git@github.com:pavel-obraztcov/neovim-config.git nvim
 ```
-2. Install packer:
-```bash
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-```
-3. Run `:PackerSync` in Neovim. Open `lua/pavel/packer.lua` and
-run
-```
-:source
-:PackerSync
+2. Start Neovim. `vim.pack` will install missing plugins automatically from
+	`lua/pavel/plugins.lua`.
+3. After the first startup, run:
+```vim
+:TSUpdate
+:MasonUpdate
 ```
 
 ## Structure
