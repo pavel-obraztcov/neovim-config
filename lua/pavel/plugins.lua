@@ -16,9 +16,9 @@ local function run_pack_hook(plugin_name, command)
     end
 end
 
-vim.api.nvim_create_autocmd("PackChanged", {
-    callback = run_pack_hook("nvim-treesitter", "TSUpdate"),
-})
+-- vim.api.nvim_create_autocmd("PackChanged", {
+--     callback = run_pack_hook("nvim-treesitter", "TSUpdate"),
+-- })
 
 vim.api.nvim_create_autocmd("PackChanged", {
     callback = run_pack_hook("mason.nvim", "MasonUpdate"),
@@ -32,7 +32,6 @@ vim.pack.add({
     { src = "https://github.com/rose-pine/neovim", name = "rose-pine" },
     "https://github.com/nvim-treesitter/nvim-treesitter",
     "https://github.com/nvim-treesitter/nvim-treesitter-textobjects",
-    "https://github.com/nvim-treesitter/playground",
     "https://github.com/ThePrimeagen/harpoon",
     "https://github.com/mbbill/undotree",
     "https://github.com/tpope/vim-fugitive",
