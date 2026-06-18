@@ -16,9 +16,9 @@ local function run_pack_hook(plugin_name, command)
     end
 end
 
--- vim.api.nvim_create_autocmd("PackChanged", {
---     callback = run_pack_hook("nvim-treesitter", "TSUpdate"),
--- })
+vim.api.nvim_create_autocmd("PackChanged", {
+    callback = run_pack_hook("nvim-treesitter", "TSUpdate"),
+})
 
 vim.api.nvim_create_autocmd("PackChanged", {
     callback = run_pack_hook("mason.nvim", "MasonUpdate"),
@@ -36,7 +36,6 @@ vim.pack.add({
     "https://github.com/mbbill/undotree",
     "https://github.com/tpope/vim-fugitive",
     "https://github.com/tpope/vim-surround",
-    { src = "https://github.com/VonHeikemen/lsp-zero.nvim", version = "v2.x" },
     "https://github.com/neovim/nvim-lspconfig",
     "https://github.com/williamboman/mason.nvim",
     "https://github.com/williamboman/mason-lspconfig.nvim",
