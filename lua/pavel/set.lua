@@ -37,3 +37,6 @@ vim.opt.colorcolumn = "120"
 vim.opt.textwidth = 120
 
 vim.opt.rtp:prepend {"/home/pavel/.opam/cs3110-2024sp/share/ocp-indent/vim"}
+
+-- Settings for netrw
+vim.g.netrw_bufsettings = 'noma nomod nu rnu nobl nowrap ro'
