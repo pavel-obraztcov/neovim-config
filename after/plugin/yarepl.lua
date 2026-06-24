@@ -29,16 +29,16 @@ yarepl.setup {
 -- Start a REPL and choose which one
 vim.keymap.set("n", "<leader>rs", function()
     local win_id = vim.fn.win_getid()
-    vim.cmd("REPLStart")
-    vim.cmd("1REPLAttachBufferToREPL")
+    vim.cmd("Yarepl start")
+    vim.cmd("1Yarepl attach_buffer")
     vim.fn.win_gotoid(win_id)
 end)
 
 -- Start an IPython REPL
 vim.keymap.set("n", "<leader>rp", function()
     local win_id = vim.fn.win_getid()
-    vim.cmd("REPLStart ipython")
-    vim.cmd("1REPLAttachBufferToREPL")
+    vim.cmd("Yarepl start ipython")
+    vim.cmd("1Yarepl attach_buffer")
     vim.fn.win_gotoid(win_id)
 end)
 
@@ -48,21 +48,21 @@ end
 
 -- Close REPL
 vim.keymap.set("n", "<leader>rq", function()
-    vim.cmd("REPLClose")
+    vim.cmd("Yarepl close")
     sleep(2)
-    vim.cmd("REPLExec y")
+    vim.cmd("Yarepl exec y")
 end)
 
 -- Key bindings to send stuff to REPL
 -- Line
-vim.keymap.set("n", "<leader>l", "<cmd>REPLSendLine<CR>")
+vim.keymap.set("n", "<leader>l", "<cmd>Yarepl send_line<CR>")
 -- Line + go down
-vim.keymap.set("n", "<leader>d", "<cmd>REPLSendLine<CR>j")
+vim.keymap.set("n", "<leader>d", "<cmd>Yarepl send_line<CR>j")
 -- Any movement
-vim.keymap.set("n", "<leader>o", "<cmd>REPLSendOperator<CR>")
+vim.keymap.set("n", "<leader>o", "<cmd>Yarepl send_operator<CR>")
 -- Paragraph
-vim.keymap.set("n", "<leader>pp", "<cmd>REPLSendOperator<CR>ap")
+vim.keymap.set("n", "<leader>pp", "<cmd>Yarepl send_operator<CR>ap")
 -- Visual selection
-vim.keymap.set("v", "<leader>ss", "<cmd>REPLSendVisual<CR>")
+vim.keymap.set("v", "<leader>ss", "<cmd>Yarepl source_visual<CR>")
 -- Send the whole document
-vim.keymap.set("n", "<leader>G", "mzggVG<cmd>REPLSendVisual<CR><Esc>'z")
+vim.keymap.set("n", "<leader>G", "mzggVG<cmd>Yarepl source_visual<CR><Esc>'z")
